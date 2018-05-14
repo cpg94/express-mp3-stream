@@ -39,13 +39,6 @@ app.get('/stream.mp3', function (req, res) {
   encoder.pipe(res);
 });
 
-
-// Not needed anymore as not hostin on same server.
-app.get('/', function (req, res) {
-   res.sendFile(__dirname + '/index.html');
-});
-
-
 // Listen on port 3000
 app.listen(3000, () => {
   console.log(
